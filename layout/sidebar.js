@@ -1,8 +1,6 @@
 // layout/sidebar.js
 
-// layout/sidebar.js
-
-function createSidebar(onNavigate) {
+function createSidebar(onNavigate, activeKey = "button") {
   const sidebar = document.createElement("div");
 
   const menuItems = [
@@ -18,17 +16,23 @@ function createSidebar(onNavigate) {
     menuItem.innerText = item.name;
     menuItem.classList.add("sidebar-item");
 
+    // ✅ Set active on load
+    if (item.key === activeKey) {
+      menuItem.classList.add("active");
+      activeElement = menuItem;
+    }
+
     menuItem.addEventListener("click", () => {
-      // Remove previous active
+      // remove previous
       if (activeElement) {
         activeElement.classList.remove("active");
       }
 
-      // Add active to current
+      // set new active
       menuItem.classList.add("active");
       activeElement = menuItem;
 
-      // Navigate
+      // navigate
       onNavigate(item.key);
     });
 

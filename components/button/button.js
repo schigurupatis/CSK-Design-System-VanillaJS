@@ -9,14 +9,16 @@ function createButton({
 }) {
   const button = document.createElement("button");
 
-  // Base class
-  button.classList.add("btn");
+  // // Base class
+  // button.classList.add("btn");
 
-  // Variant class
-  button.classList.add(`btn-${variant}`);
+  // // Variant class
+  // button.classList.add(`btn-${variant}`);
 
-  // Size class
-  button.classList.add(`btn-${size}`);
+  // // Size class
+  // button.classList.add(`btn-${size}`);
+
+  button.classList.add("btn", `btn-${variant}`, `btn-${size}`);
 
   // Text
   button.innerText = label;

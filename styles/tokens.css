@@ -2,19 +2,51 @@
    TOKENS (Design System Core)
 ========================= */
 :root {
-  /* COLORS */
+  /* =========================
+     COLORS (BASE + STATES)
+  ========================= */
+
+  /* Primary */
   --color-primary: #0d6efd;
   --color-primary-hover: #0b5ed7;
   --color-primary-active: #0a58ca;
 
+  /* Secondary */
   --color-secondary: #6c757d;
   --color-secondary-hover: #5c636a;
+  --color-secondary-active: #565e64;
 
+  /* Success */
   --color-success: #198754;
-  --color-danger: #dc3545;
-  --color-warning: #ffc107;
-  --color-info: #0dcaf0;
+  --color-success-hover: #157347;
+  --color-success-active: #146c43;
 
+  /* Danger */
+  --color-danger: #dc3545;
+  --color-danger-hover: #bb2d3b;
+  --color-danger-active: #b02a37;
+
+  /* Warning */
+  --color-warning: #ffc107;
+  --color-warning-hover: #e0a800;
+  --color-warning-active: #d39e00;
+
+  /* Info */
+  --color-info: #0dcaf0;
+  --color-info-hover: #31d2f2;
+  --color-info-active: #25cff2;
+
+  /* Light */
+  --color-light: #f8f9fa;
+  --color-light-hover: #e2e6ea;
+  --color-light-active: #dae0e5;
+
+  /* Dark */
+  --color-dark: #212529;
+  --color-dark-hover: #1a1e21;
+  --color-dark-active: #141619;
+
+  /* Neutral */
   --color-white: #ffffff;
   --color-black: #000000;
   --color-gray-100: #f8f9fa;
@@ -22,25 +54,48 @@
   --color-gray-600: #6c757d;
   --color-gray-900: #212529;
 
-  /* TYPOGRAPHY */
+  /* =========================
+     FOCUS STATES (VERY IMPORTANT)
+  ========================= */
+
+  --focus-ring-color: rgba(13, 110, 253, 0.5);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
   --font-family-base: system-ui, -apple-system, Arial, sans-serif;
   --font-size-sm: 12px;
   --font-size-md: 14px;
   --font-size-lg: 16px;
 
-  /* SPACING */
+  /* =========================
+     SPACING
+  ========================= */
+
   --spacing-sm: 6px 10px;
   --spacing-md: 8px 14px;
   --spacing-lg: 12px 18px;
 
-  /* BORDER */
+  /* =========================
+     BORDER
+  ========================= */
+
   --border-radius: 6px;
   --border-width: 1px;
 
-  /* SHADOW */
+  /* =========================
+     SHADOW
+  ========================= */
+
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.1);
   --shadow-md: 0 2px 6px rgba(0,0,0,0.15);
 
-  /* TRANSITIONS */
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
   --transition-fast: 0.2s ease-in-out;
 }
