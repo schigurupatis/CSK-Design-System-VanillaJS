@@ -1,0 +1,29 @@
+/* =========================
+   GLOBAL STYLES ENTRY
+========================= */
+/* 
+@import url('./tokens.css');
+@import url('./base.css');
+@import url('./utilities.css'); */
+
+/* Optional: Global tweaks */
+
+body {
+  scroll-behavior: smooth;
+}
+
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 250px;
+  border-right: 1px solid #ddd;
+  padding: 16px;
+}
+
+#content {
+  flex: 1;
+  padding: 20px;
+}

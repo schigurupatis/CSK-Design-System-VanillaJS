@@ -1,0 +1,114 @@
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+.grid { display: grid; }
+
+/* =========================
+   SPACING
+========================= */
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+
+/* =========================
+   WIDTH
+========================= */
+.w-100 { width: 100%; }
+
+/* =========================
+   DISPLAY
+========================= */
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-none { display: none; }
+
+/* =========================
+   TEXT
+========================= */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-bold { font-weight: 600; }
+.text-muted { color: var(--color-gray-600); }
+
+/* =========================
+   BORDER
+========================= */
+.border {
+  border: var(--border-width) solid var(--color-gray-300);
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}
+
+/* =========================
+   SHADOW
+========================= */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+
+/* =========================
+   CURSOR
+========================= */
+.cursor-pointer { cursor: pointer; }
+
+/* =========================
+   TRANSITION
+========================= */
+.transition {
+  transition: var(--transition-fast);
+}
+
+
+
+/* =========================
+   SIDEBAR STYLES
+========================= */
+
+#sidebar {
+  width: 250px;
+  background: #1e293b; /* dark slate */
+  color: #ffffff;
+  height: 100vh;
+  padding: 16px;
+}
+
+/* Menu item */
+.sidebar-item {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: background 0.2s ease;
+}
+
+/* Hover */
+.sidebar-item:hover {
+  background: #334155;
+}
+
+/* Active item */
+.sidebar-item.active {
+  background: #890dfd; /* primary */
+  color: white;
+}
