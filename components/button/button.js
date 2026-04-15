@@ -27,7 +27,7 @@ function createButton({
   button.disabled = disabled;
 
   // Event
-  if (onClick) {
+  if (onClick && !disabled) {
     button.addEventListener("click", onClick);
   }
 

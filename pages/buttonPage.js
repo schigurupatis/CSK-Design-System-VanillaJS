@@ -29,12 +29,23 @@ function renderButtonPage(container) {
   solidVariants.forEach(variant => {
     const btn = createButton({
       label: variant,
-      variant: variant
+      variant: variant,
+      onClick: () => alert(`${variant} clicked`)
     });
 
     btn.style.margin = "6px";
     container.appendChild(btn);
   });
+
+  // ✅ Single Disabled Button
+  const disabledBtn = createButton({
+    label: "Disabled",
+    variant: "primary",
+    disabled: true
+  });
+  disabledBtn.style.margin = "6px";
+  container.appendChild(disabledBtn);
+  
 
   // ===== Outline Buttons =====
   const outlineTitle = document.createElement("h3");
@@ -51,12 +62,22 @@ function renderButtonPage(container) {
   outlineVariants.forEach(variant => {
     const btn = createButton({
       label: variant.replace("outline-", ""),
-      variant: variant
+      variant: variant,
+      onClick: () => alert(`${variant} clicked`)
     });
 
     btn.style.margin = "6px";
     container.appendChild(btn);
   });
+
+  // ✅ Single Disabled Outline Button
+  const disabledOutlineBtn = createButton({
+    label: "Disabled",
+    variant: "outline-primary",
+    disabled: true
+  });
+  disabledOutlineBtn.style.margin = "6px";
+  container.appendChild(disabledOutlineBtn);
 
   // ===== Sizes Section =====
   const sizeTitle = document.createElement("h3");
@@ -66,15 +87,33 @@ function renderButtonPage(container) {
 
   const sizes = ["sm", "md", "lg"];
 
+  // sizes.forEach(size => {
+  //   const btn = createButton({
+  //     label: `Size ${size.toUpperCase()}`,
+  //     variant: "primary",
+  //     size: size
+  //   });
+
+  //   btn.style.margin = "6px";
+  //   container.appendChild(btn);
+  // });
+
   sizes.forEach(size => {
+    const row = document.createElement("div");
+
+    const label = document.createElement("p");
+    label.innerText = size.toUpperCase();
+
     const btn = createButton({
-      label: `Size ${size.toUpperCase()}`,
-      variant: "primary",
+      label: `${size.toUpperCase()} Button`,
       size: size
     });
 
-    btn.style.margin = "6px";
-    container.appendChild(btn);
+    row.appendChild(label);
+    row.appendChild(btn);
+    row.style.marginBottom = "10px";
+
+    container.appendChild(row);
   });
 
   // container.appendChild(

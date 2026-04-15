@@ -267,3 +267,9 @@
 .btn-sm { padding: var(--spacing-sm); font-size: 12px; }
 .btn-md { padding: var(--spacing-md); font-size: 14px; }
 .btn-lg { padding: var(--spacing-lg); font-size: 16px; }
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* 🔥 prevents clicks */
+}
