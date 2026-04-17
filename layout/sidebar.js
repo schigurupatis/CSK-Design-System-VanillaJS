@@ -6,7 +6,8 @@ function createSidebar(onNavigate, activeKey = "button") {
   const menuItems = [
     { name: "Button", key: "button" },
     { name: "Input", key: "input" },
-    { name: "Modal", key: "modal" }
+    { name: "Modal", key: "modal" },
+    { name: "Dropdown", key: "dropdown" }
   ];
 
   let activeElement = null;

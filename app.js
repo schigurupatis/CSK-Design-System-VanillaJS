@@ -14,6 +14,7 @@ const contentContainer = document.getElementById("content");
 // ==============================
 const routes = {
   button: renderButtonPage,
+  dropdown: renderDropdownPage,
 
   input: (container) => {
     container.innerHTML = "<h2>Input Component (Coming Soon)</h2>";
