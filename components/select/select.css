@@ -1,0 +1,59 @@
+/* =========================
+   SELECT COMPONENT
+========================= */
+
+.select {
+  position: relative;
+  width: 200px;
+}
+
+.select-trigger {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dropdown */
+.select-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  display: none;
+  z-index: 1000;
+}
+
+.select-menu.show {
+  display: block;
+}
+
+/* Items */
+.select-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-item:hover {
+  background: var(--color-gray-100);
+}
+
+.select-item.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Disabled */
+.select.disabled .select-trigger {
+  background: var(--color-gray-100);
+  cursor: not-allowed;
+}

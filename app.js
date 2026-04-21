@@ -12,15 +12,23 @@ const contentContainer = document.getElementById("content");
 // ==============================
 // ROUTES (PAGE MAPPING)
 // ==============================
+// const routes = {
+//   button: renderButtonPage,
+//   dropdown: renderDropdownPage,
+
+//   input: renderInputPage,
+
+//   modal: (container) => {
+//     container.innerHTML = "<h2>Modal Component (Coming Soon)</h2>";
+//   }
+// };
 const routes = {
   button: renderButtonPage,
   dropdown: renderDropdownPage,
-
   input: renderInputPage,
-
-  modal: (container) => {
-    container.innerHTML = "<h2>Modal Component (Coming Soon)</h2>";
-  }
+  select: renderSelectPage,
+  radio: (c) => c.innerHTML = "<h2>Radio Coming Soon</h2>",
+  checkbox: (c) => c.innerHTML = "<h2>Checkbox Coming Soon</h2>"
 };
 
 // ==============================
