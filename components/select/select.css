@@ -57,3 +57,34 @@
   background: var(--color-gray-100);
   cursor: not-allowed;
 }
+
+
+
+/* Search input inside dropdown */
+.select-search {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid var(--color-gray-300);
+  outline: none;
+}
+
+/* Multi select selected tags */
+.select-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.select-tag {
+  background: var(--color-primary);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Checkbox style inside dropdown */
+.select-item input {
+  margin-right: 6px;
+}

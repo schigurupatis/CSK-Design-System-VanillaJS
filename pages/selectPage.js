@@ -2,44 +2,45 @@ function renderSelectPage(container) {
   container.innerHTML = "<h2>Select</h2>";
 
   const options = [
-    { label: "Option 1", value: "1" },
-    { label: "Option 2", value: "2" },
-    { label: "Option 3", value: "3" }
+    { label: "React", value: "react" },
+    { label: "Angular", value: "angular" },
+    { label: "Vue", value: "vue" },
+    { label: "Svelte", value: "svelte" }
   ];
 
   // Default
   container.appendChild(
     createSelect({
-      label: "Choose option",
-      options: options,
-      placeholder: "Select option"
+      label: "Default Select",
+      options
     })
   );
 
-  // With default value
+  // Searchable
   container.appendChild(
     createSelect({
-      label: "Preselected",
-      options: options,
-      value: "2"
+      label: "Searchable Select",
+      options,
+      searchable: true
     })
   );
 
-  // Disabled
+  // Multi Select
   container.appendChild(
     createSelect({
-      label: "Disabled Select",
-      options: options,
-      disabled: true
+      label: "Multi Select",
+      options,
+      multiple: true
     })
   );
 
-  // With onChange
+  // Searchable + Multi
   container.appendChild(
     createSelect({
-      label: "With Event",
-      options: options,
-      onChange: (val) => console.log("Selected:", val)
+      label: "Searchable Multi Select",
+      options,
+      searchable: true,
+      multiple: true
     })
   );
 }
