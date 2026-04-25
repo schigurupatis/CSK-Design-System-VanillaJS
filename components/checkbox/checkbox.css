@@ -1,0 +1,76 @@
+/* =========================
+   CHECKBOX COMPONENT
+========================= */
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Hide native */
+.checkbox-item input {
+  display: none;
+}
+
+/* Custom box */
+.checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-gray-600);
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Check mark */
+.checkbox-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease;
+}
+
+/* Checked */
+.checkbox-item input:checked + .checkbox-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Variants */
+.checkbox-primary input:checked + .checkbox-custom::after {
+  background: var(--color-primary);
+}
+.checkbox-success input:checked + .checkbox-custom::after {
+  background: var(--color-success);
+}
+.checkbox-danger input:checked + .checkbox-custom::after {
+  background: var(--color-danger);
+}
+
+/* Sizes */
+.checkbox-sm .checkbox-custom {
+  width: 12px;
+  height: 12px;
+}
+.checkbox-lg .checkbox-custom {
+  width: 20px;
+  height: 20px;
+}
+
+/* Disabled */
+.checkbox-item.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
