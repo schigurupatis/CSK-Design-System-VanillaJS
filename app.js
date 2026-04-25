@@ -27,7 +27,7 @@ const routes = {
   dropdown: renderDropdownPage,
   input: renderInputPage,
   select: renderSelectPage,
-  radio: (c) => c.innerHTML = "<h2>Radio Coming Soon</h2>",
+  radio: renderRadioPage,
   checkbox: (c) => c.innerHTML = "<h2>Checkbox Coming Soon</h2>"
 };
 
