@@ -81,7 +81,8 @@ function createSidebar(onNavigate, activeKey = "button") {
   // ===== Normal items =====
   const mainItems = [
     { name: "Button", key: "button" },
-    { name: "Dropdown", key: "dropdown" }
+    { name: "Dropdown", key: "dropdown" },
+    { name: "Modal", key: "modal" }
   ];
 
   mainItems.forEach(item => {

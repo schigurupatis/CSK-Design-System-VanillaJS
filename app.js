@@ -29,6 +29,7 @@ const routes = {
   select: renderSelectPage,
   radio: renderRadioPage,
   checkbox: renderCheckboxPage,
+  modal: renderModalPage,
 };
 
 // ==============================
