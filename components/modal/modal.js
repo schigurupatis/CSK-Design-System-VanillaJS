@@ -2,7 +2,8 @@ function createModal({
   title = "Modal Title",
   content = "Modal content",
   closable = true,
-  footer = true
+  footer = true,
+  size = "md"
 }) {
   // Overlay
   const overlay = document.createElement("div");
@@ -10,7 +11,8 @@ function createModal({
 
   // Modal
   const modal = document.createElement("div");
-  modal.classList.add("modal");
+//   modal.classList.add("modal");
+modal.classList.add("modal", `modal-${size}`);
 
   // ===== HEADER =====
   const header = document.createElement("div");

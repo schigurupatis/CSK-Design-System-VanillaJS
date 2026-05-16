@@ -1,28 +1,38 @@
 function renderModalPage(container) {
   container.innerHTML = "<h2>Modal</h2>";
 
-  // Create modal
-  const modal = createModal({
-    title: "Delete Item",
-    content: `
-      <p>
-        Are you sure you want to delete this item?
-      </p>
-    `
-  });
+  // Reusable helper
+  function addModalButton(label, size) {
+    const modal = createModal({
+      title: `${label} Modal`,
+      content: `
+        <p>
+          This is a ${label.toLowerCase()} modal example.
+        </p>
+      `,
+      size: size
+    });
 
-  // Open button
-  const openBtn = createButton({
-    label: "Open Modal",
-    variant: "primary"
-  });
+    const btn = createButton({
+      label: label,
+      variant: "primary"
+    });
 
-  openBtn.addEventListener("click", () => {
-    modal.open();
-  });
+    btn.style.margin = "6px";
 
-  container.appendChild(openBtn);
+    btn.addEventListener("click", () => {
+      modal.open();
+    });
 
-  // Append modal to body
-  document.body.appendChild(modal.element);
+    container.appendChild(btn);
+
+    document.body.appendChild(modal.element);
+  }
+
+  // ===== Modal Sizes =====
+  addModalButton("Small Modal", "sm");
+  addModalButton("Medium Modal", "md");
+  addModalButton("Large Modal", "lg");
+  addModalButton("Extra Large Modal", "xl");
+  addModalButton("Fullscreen Modal", "fullscreen");
 }
